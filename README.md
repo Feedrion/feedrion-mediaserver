@@ -54,7 +54,7 @@ Your libraries need TheTVDB metadata for TV shows (the default for both servers)
 ### Jellyfin
 
 1. Dashboard ▸ Plugins ▸ Repositories ▸ **+**, URL:
-   `https://github.com/max28/feedrion-mediaserver/releases/latest/download/manifest.json`
+   `https://github.com/Feedrion/feedrion-mediaserver/releases/latest/download/manifest.json`
 2. Catalogue ▸ **Feedrion** ▸ Install, then restart Jellyfin.
 
 Or unzip `feedrion-jellyfin-<version>.zip` into `plugins/Feedrion_<version>/`
@@ -148,7 +148,7 @@ Every release asset is signed with [cosign](https://docs.sigstore.dev/) (keyless
 ```bash
 cosign verify-blob feedrion-jellyfin-1.0.0.zip \
   --bundle feedrion-jellyfin-1.0.0.zip.sigstore.json \
-  --certificate-identity-regexp '^https://github.com/max28/feedrion-mediaserver/\.github/workflows/release\.yml@refs/heads/main$' \
+  --certificate-identity-regexp '^https://github.com/Feedrion/feedrion-mediaserver/\.github/workflows/release\.yml@refs/heads/main$' \
   --certificate-oidc-issuer https://token.actions.githubusercontent.com
 ```
 
